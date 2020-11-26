@@ -45,3 +45,28 @@ int main()
         return 0;
     }
 }
+/*自定义函数，修改学生成绩*/
+int update_score(struct student *p,int n,int num,int course,int score)
+{
+    int i,pos;
+    for(i=0;i<n;i++,p++)
+    {
+        if(p->num==num)         //按学号查找
+        break;
+    }
+    if(i<n)
+    {
+        switch(course){
+            case 1:p->math=score;break;
+            case 2:p->english=score;break;
+            case 3:p->computer=score;break;
+        }
+        pos=i;
+    }
+    else
+    {
+        pos=-1;
+    }
+    return pos;
+    
+}
