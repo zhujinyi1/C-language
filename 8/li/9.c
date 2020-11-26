@@ -1,7 +1,7 @@
 /*
 祝津一
 2004240205
-电码加密
+密码输出
 */
 #include<stdio.h>
 #include<string.h>
