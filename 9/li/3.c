@@ -31,7 +31,15 @@ int main()
         scanf("%d",&students[i].english);
         printf("computer score:");
         scanf("%d",&students[i].computer);
+    }
         /*输入待修改学生信息*/
+        printf("Input the number of the students to be updated:");
+        scanf("%d",&num);
+        printf("Choice the course :1.math 2.english 3.computer:");
+        scanf("%d",&course);
+        printf("Input the new score:");
+        scanf("%d",&score);
+        /*调用函数修改学生成绩*/
         pos=update_score(students,n,num,course,score);
         /*输出修改后的学生信息*/
         if(pos==-1)
@@ -42,8 +50,9 @@ int main()
             printf("num\t math\t english\t compter\n");
             printf("%d\t %d\t %d\t %d\n",students[pos].num,students[pos].math,students[pos].english,students[pos].computer);
         }
-        return 0;
-    }
+        
+ 
+    return 0;
 }
 /*自定义函数，修改学生成绩*/
 int update_score(struct student *p,int n,int num,int course,int score)
