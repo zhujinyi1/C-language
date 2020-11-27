@@ -50,8 +50,6 @@ int main()
             printf("num\t math\t english\t compter\n");
             printf("%d\t %d\t %d\t %d\n",students[pos].num,students[pos].math,students[pos].english,students[pos].computer);
         }
-        
- 
     return 0;
 }
 /*自定义函数，修改学生成绩*/
