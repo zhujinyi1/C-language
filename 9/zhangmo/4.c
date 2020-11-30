@@ -1,7 +1,7 @@
 /*
-ç¥æ´¥ä¸€
+×£½òÒ»
 2004240205
-æŸ¥æ‰¾ä¹¦
+²éÕÒÊé
 */
 #include<stdio.h>
 struct books{
@@ -13,9 +13,9 @@ int main()
     int i,l=0,h=0;
     for(i=0;i<10;i++)
     {
-        printf("è¯·è¾“å…¥ç¬¬%dæœ¬ä¹¦çš„ä¹¦å:",i+1);
+        printf("ÇëÊäÈëµÚ%d±¾ÊéµÄÊéÃû:",i+1);
         scanf("%s",&b[i].name);
-        printf("è¯·è¾“å…¥ä»·æ ¼:");
+        printf("ÇëÊäÈë¼Û¸ñ:");
         scanf("%f",&b[i].price);
     }
     for(i=0;i<10;i++)
@@ -25,11 +25,11 @@ int main()
         if(b[i].price<=b[l].price)
         l=i;
     }   
-    printf("ä»·æ ¼æœ€é«˜çš„ä¹¦ï¼š\n");
-    printf("ä¹¦å\t\tä»·æ ¼\n");
+    printf("¼Û¸ñ×î¸ßµÄÊé£º\n");
+    printf("ÊéÃû\t\t¼Û¸ñ\n");
     printf("%s\t\t%.2f\n",b[h].name,b[h].price);
-    printf("ä»·æ ¼æœ€ä½çš„ä¹¦ï¼š\n");
-    printf("ä¹¦å\t\tä»·æ ¼\n");
+    printf("¼Û¸ñ×îµÍµÄÊé£º\n");
+    printf("ÊéÃû\t\t¼Û¸ñ\n");
     printf("%s\t\t%.2f\n",b[l].name,b[l].price);
     return 0;
 }
