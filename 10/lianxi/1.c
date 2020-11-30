@@ -11,7 +11,6 @@ int sum(int n)
     else
     {
         return n+sum(n-1);
-        n--;
     }
 }
 int main()

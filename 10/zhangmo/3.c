@@ -11,7 +11,6 @@ int f(int x,int n)
     else
     {
         return x*f(x,n-1);
-        n--;
     }
     
 }
