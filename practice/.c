@@ -1,8 +1,8 @@
 #include<stdio.h>
+#define F(x) x-2
+#define D(x) x*F(x)
 int main()
 {
-    char x[12];
-    gets(x);
-    printf("%12s",x);
+    printf("%d,%d",D(3),D(D(3)));
     return 0;
 }
