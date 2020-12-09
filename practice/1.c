@@ -1,20 +1,23 @@
-#include <stdio.h>
-
+#include<stdio.h>
 int main()
 {
-  int t=1;
-  char ch;
-  scanf("%c", &ch);
-  if(ch>='a'&&ch<='z')
-	ch = ch - 32;
-  else if(ch>='A'&&ch<='Z')
-    ch = ch + 32;
-  else
+  int a,b,c,m,t,i;
+  scanf("%d%d%d",&a,&b,&c);
+  if(a>c)
+    t=a,a=c,c=t;
+  if(b>c)
+    t=b,b=c,c=t;
+  if(a+b>c&&c-b<a&&c-a<b)
   {
-    t=0;
-    printf("%d",t);
+  if(a*a+b*b>c*c)
+    m=3;
+  if(a*a+b*b<c*c)
+    m=2;
+  else
+    m=1;
   }
-  if(t==1)
-	printf("%c",ch);
+  else
+    m=0;
+    printf("%d",m);
   return 0;
 }
