@@ -72,6 +72,83 @@ void output(NODE * h)
 }
 
 /*
+功能：添加
+参数：头节点
+返回值：无 
+*/
+void add(NODE *head)
+{
+    NODE *p,*q,*new;
+    int i,j;
+    char a[12];
+    p=head;
+    p=p->next;
+    for(i=0;p->next!=NULL;i++)
+        p=p->next;
+    printf("你想把它插到哪？？？(0~%d)",i);
+    scanf("%d",&j);
+    if(j<0||j>i)
+    {
+        printf("不存在这个节点");
+    }
+
+    else
+    {
+        while(j!=0)
+        {
+            p=p->next;
+            j--;
+        }
+        q=p->next;
+        new=(NODE *)malloc(sizeof(NODE));
+        if(new==NULL)
+        {
+            pritnf("no enough memory!");
+        }
+        else
+        {
+            q=p->next;
+            printf("enter name:");
+            scanf("%s",a);
+            strcpy(new->name,a);
+            printf("enter score:");
+            scanf("%d",&new->score);
+            p->next=new;
+            new->next=q;
+        }
+        
+    }
+    
+}
+
+/*
+功能：删除
+参数：头指针·
+返回值：无
+*/
+void delete(h)
+{
+    NODE *p,*q;
+    int i,j;
+    p=p->next;
+    for(i=0;p->next!=NULL;i++)
+        p=p->next;
+    printf("你想删掉谁(0~%d)",i);
+    scanf("%d",&j);
+    if(j<0||j>i)
+    {
+        printf("不存在这个节点");
+    }
+    while(j!=0)
+    {
+        p=p->next;
+        j--;
+    }
+    q=p->next;
+    
+}
+
+/*
 功能：清理空间
 参数：头节点
 返回值：无
@@ -86,14 +163,38 @@ void f_free(NODE *head)
         free(p);
         p = head;
     }
+    exit(0);
 }
 
 /*主函数*/
 int main()
 {
+    int a;
     NODE * h=NULL;
-            h=input();              //创建链表
-            output(h);              //输出链表
-    f_free(h);
+    while(1)
+    {
+        printf("enter your choice:");
+        scanf("%d",&a);
+    
+        switch(a)
+        {
+            case 1:
+                h=input();
+                break;              //创建链表
+            case 2:
+                output(h);
+                break;              //输出链表
+            case 3:
+                add(h);             //插入
+                break;
+            case 4:
+                delete(h);          //删除
+                break;
+            case 5:                 //释放内存
+                f_free(h);
+                break;
+            default :printf("exit");exit(0);
+        }
+    }
     return 0;
 }
