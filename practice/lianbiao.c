@@ -103,7 +103,7 @@ void add(NODE *head)
         new=(NODE *)malloc(sizeof(NODE));
         if(new==NULL)
         {
-            pritnf("no enough memory!");
+            printf("no enough memory!");
         }
         else
         {
@@ -126,7 +126,7 @@ void add(NODE *head)
 参数：头指针·
 返回值：无
 */
-void delete(h)
+void f_delete(NODE *h)
 {
     NODE *p,*q;
     int i,j;
@@ -188,7 +188,7 @@ int main()
                 add(h);             //插入
                 break;
             case 4:
-                delete(h);          //删除
+                f_delete(h);          //删除
                 break;
             case 5:                 //释放内存
                 f_free(h);
