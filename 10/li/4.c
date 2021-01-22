@@ -6,9 +6,9 @@
 #include<stdio.h>
 int i=0;                                      //记录递归的层次数量
 hanoi(n,a,b,c)
-char a,b,c;
-int n;
 {
+	char a,b,c;
+	int n;
 	if(n>0)
 	{
 		if (n==1)  printf("%c→%c\n",a,c);
