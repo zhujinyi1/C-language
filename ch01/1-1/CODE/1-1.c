@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>   //反转排序
 #define M 20
 void fun(int *x,int n)
 {
